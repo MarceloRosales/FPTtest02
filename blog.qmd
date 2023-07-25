@@ -97,7 +97,7 @@ To create a blog:
           - quarto
           - code
           - templates
-          
+
         about:
           id: hero-heading
           template: jolla
