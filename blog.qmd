@@ -1,0 +1,124 @@
+---
+title: "Blog"
+listing:
+  contents: posts # Contents will be taken from the posts folder
+  sort: "date desc"
+  type: default
+  categories: true
+page-layout: full
+#margin-header: signup.html
+title-block-banner: "#EDF3F9"
+title-block-banner-color: body
+search: false
+---
+
+To create a blog:
+
+1.  Add the menu in the navbar section of the \_quarto.yml file
+
+    ``` yaml
+          - href: blog.qmd
+            text: "Blog"
+    ```
+
+2.  Create blog.qmd file and a posts folder.
+
+    ``` bash
+    touch blog.qmd  
+    mkdir posts 
+    ```
+
+3.  In the blog.qmd file add the head yml code:
+
+    ``` yaml
+    title: "Blog"
+    listing:
+      contents: posts # Contents will be taken from the posts folder
+      sort: "date desc"
+      type: default
+      categories: true
+    page-layout: full
+    #margin-header: signup.html
+    title-block-banner: "#EDF3F9"
+    title-block-banner-color: body
+    search: false
+    ```
+
+4.  Each blog post should have the proper yaml heading:
+
+    1.  Simple example:
+
+        ``` yaml
+        title: "Minimal post"
+        description: "Post description"
+        author: "Marcelo Rosales"
+        date: "2023/03/13"
+        categories:
+          - news
+          - code
+          - analysis
+        ```
+
+    2.  Example with lightbox filters, and html format
+
+        ``` yaml
+        title: "Complete Lightbox Example"
+        description: "How to use Lightbox"
+        author: "Marcelo Rosales"
+        date: "2023/03/13"
+        categories:
+          - photos
+          - lightbox
+          - gallelry
+        filters:
+          - lightbox
+        lightbox:
+          match: auto
+          effect: fade
+          desc-position: right
+          loop: true
+        #  css-class: "my-css-class" #only if custom css file exists. 
+        format: 
+          html: 
+            code-fold: true
+            code-copy: true
+            code-overflow: wrap
+        Editor: Source 
+        ```
+
+    3.  There are also specific templates, ex. Jolla template:
+
+        ``` yaml
+        title: "Jolla template"
+        description: "quarto templates"
+        author: "Marcelo Rosales"
+        date: "2023/03/16"
+        categories:
+          - quarto
+          - code
+          - templates
+          
+        about:
+          id: hero-heading
+          template: jolla
+          image: images/img01.png
+          links:
+            - icon: twitter
+              text: twitter
+              href: https://twitter.com
+            - icon: github
+              text: Github
+              href: https://github.com
+        ```
+
+    4.  
+
+5.  
+
+6.  
+
+This file is the the "main page" i will called it "landing page" for the blogs.\
+this files is in: \~/Documents/GitHub/Quarto/quarto-trials/quarto_website. =\> Can I place this file directly into the posts folder??
+
+All subsequent blog files need to be saved in the posts folder.\
+The yml in this file will direct to the folder and the way is displayed.　 In other words, the yml section, the listing for this page comes from the contenst in the foldes posts..."contents: posts"

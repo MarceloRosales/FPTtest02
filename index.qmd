@@ -15,3 +15,7 @@ add some text
 type some more text
 
 Now render and commit!!
+
+Deployment completed
+
+Success!!
